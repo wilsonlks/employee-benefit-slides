@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>員工內部福利平台初步構思</title>
+<title>員工內部福利平台初步計劃</title>
 <style>
 :root{
   --bg:#f8fafc; --ink:#0f172a; --ink2:#334155; --muted:#64748b;
@@ -73,7 +73,8 @@ main{display:flex; flex-direction:column}
   border:1px solid rgba(255,255,255,.3); padding:4px 12px; border-radius:999px}
 .hero h1{font-size:clamp(32px,6vw,48px); margin:16px 0 0; letter-spacing:.02em; line-height:1.15}
 .hero-sub{margin:12px 0 0; max-width:62ch; color:#dcfce7; font-size:18px; font-weight:500;}
-.hero-meta{margin-top:24px; font-size:15px; color:#bbf7d0; display:flex; gap:16px; flex-wrap:wrap;}
+.hero-meta{margin-top:24px; font-size:15px; color:#bbf7d0; display:flex; gap:16px; flex-wrap:wrap;
+  transform:translateX(-70px);}
 
 /* ---------------- Sections ---------------- */
 .card{padding:40px 0; border-top:1px solid var(--line); scroll-margin-top:calc(var(--topbar) + 20px)}
@@ -176,7 +177,7 @@ footer{max-width:1080px; margin:40px auto 0; padding:32px 20px 48px; color:var(-
   <div class="topbar-in">
     <button class="toc-btn" id="tocBtn" type="button" aria-label="開啟目錄" aria-expanded="false">☰</button>
     <div class="tb-title">
-      <span class="tb-sec" id="curSec">員工內部福利平台初步構思</span>
+      <span class="tb-sec" id="curSec">員工內部福利平台初步計劃</span>
       <span class="tb-sub" id="curSub"></span>
     </div>
   </div>
@@ -200,11 +201,10 @@ footer{max-width:1080px; margin:40px auto 0; padding:32px 20px 48px; color:var(-
 <div class="shell">
   <main>
     <header class="hero">
-      <span class="eyebrow">Proposal · 初步構思</span>
+     <!-- <span class="eyebrow">Proposal · 初步構思</span> -->
       <h1>員工內部福利平台</h1>
       <p class="hero-sub">醫食住行優惠資訊平台，集中展示、方便查閱、人事部把關。讓同事輕鬆找到適合自己的福利。</p>
       <div class="hero-meta">
-        <span>📅 匯報日期：________</span>
         <span>🔒 內部員工專用</span>
       </div>
     </header>
@@ -215,7 +215,7 @@ footer{max-width:1080px; margin:40px auto 0; padding:32px 20px 48px; color:var(-
       <div class="grid-3">
         <div class="box">
           <h4>📉 現況痛點</h4>
-          <p>員工福利資訊分散，主要靠人手通知或口耳相傳，同事尋找優惠較為麻煩。</p>
+          <p>員工福利資訊分散，主要靠在內聯網瀏覽或口耳相傳，同事尋找優惠較為麻煩。</p>
         </div>
         <div class="box">
           <h4>🎯 目標</h4>
@@ -223,7 +223,7 @@ footer{max-width:1080px; margin:40px auto 0; padding:32px 20px 48px; color:var(-
         </div>
         <div class="box">
           <h4>🛡️ 範圍</h4>
-          <p>只限內部員工使用，內容由人事部統一審核及上載，確保資訊質素。</p>
+          <p>只限內部員工使用，內容由人力資源部統一審核及上載，確保資訊質素。</p>
         </div>
       </div>
     </section>
@@ -235,8 +235,8 @@ footer{max-width:1080px; margin:40px auto 0; padding:32px 20px 48px; color:var(-
         <table class="tbl">
           <thead><tr><th>使用對象</th><th>權限與角色</th></tr></thead>
           <tbody>
-            <tr><td>一般員工</td><td>擁有帳號可登入（建議連接 AD），只可查看與使用，不可自行上載。</td></tr>
-            <tr><td>人事部 / 指定同事</td><td>負責上載、審核、維護內容，確保資訊質素與資安。</td></tr>
+            <tr><td>一般員工</td><td>使用帳號登入（建議連接 AD），只可查看與使用，不可自行上載。</td></tr>
+            <tr><td>人事力資源部同事</td><td>負責上載、審核、維護內容，確保資訊質素與安全。</td></tr>
           </tbody>
         </table>
       </div>
@@ -251,8 +251,8 @@ footer{max-width:1080px; margin:40px auto 0; padding:32px 20px 48px; color:var(-
         <span class="tag primary">關鍵字搜尋與篩選</span>
         <span class="tag primary">優惠詳情查看</span>
         <span class="tag primary">團購／報名功能</span>
-        <span class="tag primary">人事部後台管理</span>
         <span class="tag primary">收藏清單與到期提醒</span>
+        <span class="tag primary">後台管理</span>
       </div>
       
       <div class="grid-3" style="margin-top: 32px;">
@@ -272,8 +272,8 @@ footer{max-width:1080px; margin:40px auto 0; padding:32px 20px 48px; color:var(-
     </section>
 
     <section class="card" id="sec-4">
-      <div class="sec-head"><div class="sec-num">四</div><h2>分類瀏覽（方案 C）</h2></div>
-      <p class="lead">建議主分類如下（可再確認調整），每個分類可顯示「最新／限時」標籤，方便快速查看。</p>
+      <div class="sec-head"><div class="sec-num">四</div><h2>分類瀏覽</h2></div>
+      <p class="lead">建議主分類如下，每個分類可顯示「最新／限時」標籤，方便快速查看。</p>
       <div class="cat-grid">
         <div class="cat-card">
           <div class="cat-header"><div class="cat-icon">🩺</div><span class="cat-badge">最新</span></div>
@@ -362,7 +362,7 @@ footer{max-width:1080px; margin:40px auto 0; padding:32px 20px 48px; color:var(-
     <!-- 後台管理與權限 -->
     <section class="card" id="sec-6">
       <div class="sec-head"><div class="sec-num">六</div><h2>後台管理與權限設計</h2></div>
-      <p class="lead">為減輕人事部的行政負擔並確保資安，後台將採用分權管理設計，並提供自動化輔助工具。</p>
+      <p class="lead">為減輕人事部的行政負擔並確保資安全，後台將採用分權管理設計，並提供自動化輔助工具。</p>
       
       <h3 class="lead" style="font-weight: 800; font-size: 20px; margin-top: 32px; color: var(--brand-d);">權限分級設計</h3>
       <div class="tbl-wrap">
@@ -375,14 +375,14 @@ footer{max-width:1080px; margin:40px auto 0; padding:32px 20px 48px; color:var(-
               <td>不可查看或修改具體優惠內容。</td>
             </tr>
             <tr>
-              <td>人事部主管 (審核者)</td>
-              <td>最終審批上架、決定合作商家、查看數據報表。</td>
-              <td>不需處理日常排版與上載。</td>
+             <td>人力資源部專員 (編輯者)</td>
+              <td>上載優惠、排版編輯、回覆員工查詢、管理團購。</td>
+              <td>無權限直接發布，需經主管審核。</td>
             </tr>
             <tr>
-              <td>人事部專員 (編輯者)</td>
-              <td>上載優惠、排版編輯、回覆員工查詢、管理團購。</td>
-              <td><strong>無權限直接發布</strong>，需經主管審核。</td>
+              <td>人力資源部主管 (審核者)</td>
+              <td>最終審批上架、決定合作商家、查看數據報表。</td>
+              <td>不需處理日常排版與上載。</td>
             </tr>
           </tbody>
         </table>
@@ -392,15 +392,15 @@ footer{max-width:1080px; margin:40px auto 0; padding:32px 20px 48px; color:var(-
       <div class="grid-3">
         <div class="box">
           <h4>📝 內容審核與上架</h4>
-          <p>專員上載後進入「待審核」狀態。主管一鍵點擊「通過」即自動上架，確保資訊質素。</p>
+          <p>專員上載後進入「待審核」狀態。主管一鍵點擊「通過」或分別選取審核上架，確保資訊質素。</p>
         </div>
         <div class="box">
           <h4>📊 數據分析儀表板</h4>
-          <p>一鍵匯出報表：包含本月點擊率最高的優惠、哪個部門使用最踴躍。讓 HR 匯報時有數據支撐（如「平台為員工每月節省 $500」），並輔助明年續約決策。</p>
+          <p>一鍵匯出報表：包含本月點擊率最高的優惠、哪個部門使用最踴躍。讓 HR 匯報時有數據支撐（如「平台為員工每月節省 $500」），並輔助明年與商家合作的決策。</p>
         </div>
         <div class="box">
-          <h4>⏱️ 一鍵續約與自動下架</h4>
-          <p>設定優惠有效期限，過期後系統自動移至「歷史專區」或下架。若為常態優惠，可設定「自動續期」，大幅減少人手維護時間。</p>
+          <h4>⏱️ 一鍵續期與自動下架</h4>
+          <p>設定優惠有效期限，過期後系統自動移至「歷史專區」(僅供查詢)或下架。若為常態優惠，可設定「自動續期」，大幅減少人手維護時間。</p>
         </div>
       </div>
     </section>
@@ -411,9 +411,9 @@ footer{max-width:1080px; margin:40px auto 0; padding:32px 20px 48px; color:var(-
         <table class="tbl">
           <thead><tr><th>比較項目</th><th>目前（現況）</th><th>有平台後（願景）</th></tr></thead>
           <tbody>
-            <tr><td>資訊獲取</td><td>資訊分散、主要靠人手通知或口耳相傳</td><td>集中管理、可搜尋、方便隨時查閱</td></tr>
-            <tr><td>資訊質素</td><td>缺乏統一審核，質素參差</td><td>人事部把關，確保資訊準確可靠</td></tr>
-            <tr><td>使用體驗</td><td>尋找優惠較麻煩，容易錯過</td><td>分類清晰、有收藏與到期提醒，一目了然</td></tr>
+            <tr><td>資訊獲取</td><td>資訊分散、主要靠同事在內聯網瀏覽或口耳相傳</td><td>集中管理、可搜尋、方便隨時查閱</td></tr>
+            <tr><td>資訊質素</td><td>缺乏統一審核，質素有待提升</td><td>人力資源部把關，確保資訊準確可靠</td></tr>
+            <tr><td>使用體驗</td><td>尋找優惠較麻煩，內聯網瀏覽時容易給其他新的消息覆蓋，<br>錯過正在生效的優惠</td><td>分類清晰、有收藏與到期提醒，一目了然</td></tr>
             <tr><td>行政成本</td><td>人工核對、紙本登記，耗時易錯</td><td>系統自動統計、審核、下架，大幅減省時間</td></tr>
           </tbody>
         </table>
@@ -430,11 +430,11 @@ footer{max-width:1080px; margin:40px auto 0; padding:32px 20px 48px; color:var(-
         </div>
         <div class="box">
           <h4>第二階段</h4>
-          <p>加入收藏提醒、數據報表、自動續約與下架功能。</p>
+          <p>加入收藏提醒、數據報表、自動續期與下架功能。</p>
         </div>
         <div class="box">
           <h4>權限限制</h4>
-          <p>不開放外部直接上載，確保人事部把關。</p>
+          <p>不開放外部直接上載，確保人力資源部把關。</p>
         </div>
       </div>
 
@@ -446,7 +446,7 @@ footer{max-width:1080px; margin:40px auto 0; padding:32px 20px 48px; color:var(-
         </div>
         <div class="action-item">
           <div class="action-num">2</div>
-          <div class="action-text">確認負責維護的部門／同事 <span>建議由人事部指定專人負責審核與上載。</span></div>
+          <div class="action-text">確認負責維護的部門／同事 <span>建議由人力資源部指定專人負責審核與上載。</span></div>
         </div>
         <div class="action-item">
           <div class="action-num">3</div>
@@ -462,8 +462,8 @@ footer{max-width:1080px; margin:40px auto 0; padding:32px 20px 48px; color:var(-
     <section class="card" style="text-align:center; padding-top:60px; padding-bottom:60px; border-top:0;">
       <h2 style="font-size:32px; color:var(--brand-d); margin-bottom:16px;">總結</h2>
       <p style="font-size:18px; color:var(--ink2); max-width:600px; margin:0 auto 32px; line-height: 1.8;">
-        目標清晰：方便內部員工查閱福利，內容有把關。<br>
-        先確認方向與範圍，再進行開發。<br>
+        目標清晰：為方便員工查閱由人力資源部把關審核的本院福利資訊。<br>
+        先確認方向與範圍，再進行平台的功能開發。<br>
         歡迎各位提出意見與補充。
       </p>
       <p style="font-size:28px; font-weight:800; color:var(--brand); letter-spacing:.2em;">謝謝</p>
@@ -473,8 +473,8 @@ footer{max-width:1080px; margin:40px auto 0; padding:32px 20px 48px; color:var(-
 </div>
 
 <footer>
-  <div>員工內部福利平台初步構思 · 內部匯報文件</div>
-  <div style="font-size:14px; margin-top:8px; color:#94a3b8;">本簡報內容僅供內部討論使用</div>
+  <!-- <div>員工內部福利平台初步構思 · 內部匯報文件</div> -->
+  <!-- <div style="font-size:14px; margin-top:8px; color:#94a3b8;">本簡報內容僅供內部討論使用</div> -->
 </footer>
 
 <button class="to-top" id="toTop" type="button" title="回到頂端">↑</button>
